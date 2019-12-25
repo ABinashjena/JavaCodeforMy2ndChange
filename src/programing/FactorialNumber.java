@@ -1,16 +1,35 @@
-package programing;
+/*
+ * script: Factorial Number  Program
+ * Author : ABinash Jena
+ */
 
+package programing;
+/*
+ * Algorithm of this program
+ * ============================
+ * 1)run the loop until num<=0
+ * 2)temp=temp*num
+ * 3)Decrement the num
+ * 
+ */
 public class FactorialNumber {
 
 	public static void main(String[] args) {
-		int num = 6;
-		int fact = 1;
-		while (num > 0) {
-			fact = fact * num;
-			num = num - 1;
-
-		}
-		System.out.println(fact);
+		FactorialNumber.getFactorial(3);
+		
 	}
 
+	public static void getFactorial(int num)
+	{
+		int temp=1;
+		while(num>0)
+		{
+			temp=temp*num;
+					num--;
+		}
+		System.out.println(temp);
+		
+	}
+	
+	
 }

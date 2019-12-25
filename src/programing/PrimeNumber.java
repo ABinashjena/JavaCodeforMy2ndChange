@@ -1,20 +1,43 @@
+/*
+ * script: Prime Number Program
+ * Author : ABinash Jena
+ */
 package programing;
 
 public class PrimeNumber {
-	public void PrimeNumber()
-	{
-	for(int i=1;i<15;i++)
-	{
-		boolean prime = true;
+	/*
+	 *  Algorithm  of this program
+	 *  ============================
+	 *  1) take a Number 
+	 *  2) check that number is divided through 2 to num-1 ; if yes 
+	 *  3)print its not prime number 
+	 *  4)else prime number
+	 */
 	
-	for(int ans=2;ans<i;ans++)
+	
+	
+	public static void main(String ...args)
 	{
-		prime=false;
+		PrimeNumber.getPrime(7);
 	}
-	if(prime)
+	public static void getPrime(int num)
 	{
-		System.out.println(i+ "  its aprime Number");
-	}
-	}
-}
+		boolean ans=false;
+	  for (int i=2;i<=num-1;i++)
+	  {
+		  if(num%i==0)
+		  {
+			  ans=true;
+		  }  
+	  }
+		
+	  if(ans==false)
+	  {
+		  System.out.println(num+"  prime Number");
+	  }
+	  else
+	  {
+		  System.out.println(num+"  not a prime number");
+	  }
+     }
 }
